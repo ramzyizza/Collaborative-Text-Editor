@@ -11,4 +11,4 @@ io.on("connection", socket => {
 })
 
 
-var cors = require('cors')
+var cors = require('cors')                  //fix for cors blocking XMLHttpRequest at server URL
