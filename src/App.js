@@ -1,8 +1,8 @@
-import TextEditor from "./TextEditor";
+import TextEditor from "./TextEditor"
+
 
 function App() {
   return <TextEditor/>
-
 }
 
-export default App;
+export default App
