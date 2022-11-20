@@ -8,8 +8,10 @@ const io = require('socket.io')(3001, {     //sets 3001 to make it a different u
 })
 //If connections established notify through socket
 io.on("connection", socket => {
+    console.log("Connection Established")
     //Add event listener to receive changes from clients (delta)
     socket.on('send-changes', delta => {
+        console.log(delta)
         socket.broadcast.emit("receive-changes", delta)
     })
 })

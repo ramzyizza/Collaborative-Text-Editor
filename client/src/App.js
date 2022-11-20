@@ -1,8 +1,7 @@
-import TextEditor from "./TextEditor"
-
+import TextField from "./TextField"
 
 function App() {
-  return <TextEditor/>
+  return <TextField/>
 }
 
 export default App

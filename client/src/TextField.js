@@ -5,19 +5,19 @@ import "quill/dist/quill.snow.css"
 import {io} from 'socket.io-client'
 import "./styles.css";
 
-
 //Quill Toolbar Configurations
 const TOOLBAR =  [
-    [{ header: [1,2,3,4,5,6,false]}], //Types of Heading Sizes
-    [{font : []}],
-    [{list: "ordered"}, {list: "bullet"}],
-    ["bold", "italic" , "underline"],
-    [{color: []} , {background: []}],
-    [{script:"sub"}, {script: "super"}],
-    [{align: []}],
-    ["image" , "blackquote" , "code-block"],
-    ["clean"],
+    [{ 'size': [] }], // Size of Text
+    [{ 'font': [] }], // Font Type
+    [{ 'align': [] }], //Text Alignment 
+    [{ 'color': [] }, { 'background': [] }], // Font Color and Highlight
+    [ 'bold', 'italic', 'underline', 'strike'], //Font Manipulation
+    ['blockquote', 'code-block', 'link'], // Text Type
+    [{ 'script': 'super' }, { 'script': 'sub' }], // Font Power and Sub
+    [{ 'list': 'ordered' }, { 'list': 'bullet'}, { 'indent': '-1' }, { 'indent': '+1' }], //List type
+    [ 'link', 'image', 'video', 'formula' ] //Insert to documents
 ]
+
 export default function TextEditor(){ 
     //Set state to be able to connect to sockets
     const [socket, setSocket] = useState()
@@ -93,6 +93,21 @@ export default function TextEditor(){
     //HTML Content, Styling with TailwindCSS
     return (
         <>
-        <div className="container" ref={wrapperRef}></div> </> 
-        ) 
+        <div className='justify-center flex mt-5'>
+            <span className='text-6xl font-bold text-slate-200'>Collabora</span>
+            <span className='text-6xl font-bold text-blue-700'>Text</span>
+        </div>
+        <h1 className='text-slate-200 flex justify-center font-semibold'>Final Project Computer Systems and Networking</h1>
+        <div className='mt-5 text-white '>
+            <h1 className='flex justify-center'>Ramzy Izza Wardhana - 21/472698/PA/20322</h1>
+            <h1 className='flex justify-center'>Moehammad Azzriel Ilham - 21/477994/PA/20724</h1>
+            <h1 className='flex justify-center mb-6'>Audrey Shafira Fattima - 21/472678/PA/20320</h1>
+        </div>
+
+        <div className="container mx-auto" ref={wrapperRef}></div> </> 
+    ) 
+
+        
+
+
 } 

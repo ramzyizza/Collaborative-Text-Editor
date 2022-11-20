@@ -7,33 +7,40 @@
 }
 
 body{
-    background-color:antiquewhite;
+    background-color: #282828;
     margin: 0;
 }
 
-
-.container .ql-editor{  /*editing .ql-editor to change the tempate where we type to standard A4 */  
-    width: 8.5in;
-    min-height: 11in;
-    padding: 1in;
+/* Text Field */
+.container .ql-editor{  
+    width: 9.7in; 
+    height: auto;
+    padding: 0.5in;
     margin: 1rem;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 5);
     background-color: white;
+    border-radius: 10px;
 }
 
-.container .ql-container.ql-snow { /*editing the outer borders of the webpage */
+/* Border of the page */
+.container .ql-container.ql-snow {
     border: none;
     display: flex;
     justify-content: center;
 }
 
+/* Toolar */
 .container .ql-toolbar.ql-snow{ /* editing toolbar */
+    padding: 1rem;
+    border-radius: 10px;
+    margin: auto;
+    width: fit-content;
     display: flex;
     justify-content: center;
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: antiquewhite;
+    background-color: #b3b3b3;
     border: none;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 5);
 }
