@@ -3,8 +3,6 @@ import React from 'react'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
 import {io} from 'socket.io-client'
-// import ReactQuill from "react-quill";
-// import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import "./styles.css";
 
 
@@ -86,13 +84,15 @@ export default function TextEditor(){
         setQuill(q)
     }, [])
 
-
         useEffect(() => {
-
         return() =>{ 
             wrapperRef.innerHTML = "" //clears everything out
         }
-    }, [])                                 //useEffect is used here so the new instance of quill only run once
+    }, [])    //useEffect is used here so the new instance of quill only run once
+
+    //HTML Content, Styling with TailwindCSS
     return (
-        <div className="container" ref={wrapperRef}></div>) //makes the header 
+        <>
+        <div className="container" ref={wrapperRef}></div> </> 
+        ) 
 } 
