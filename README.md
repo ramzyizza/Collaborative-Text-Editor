@@ -5,15 +5,13 @@ This project is intended to fulfill the 2022 Computer Network and Systems Lab gr
 - Audrey Shafira Fattima - 21/472678/PA/20320
 - Moehammad Azzriel Ilham - 21/477994/PA/20724
 
-
 In this final project, we are implementing the concept of socket programming in a real-world application to connect 
 multiple clients to a server. The main program functionality is to allow the user to collaboratively add, edit, manipulate,
 and delete text in real time through the local host server. This group project was inspired by one of the well-known online
 text or document editors, Google Docs. Hence, we are naming the final product to be CollaboraText. Our goal and scope in this
 project is to produce a socket on the server side and also the client side to be able to communicate through a web-based platform (Browser).
 
-
-Therefore, to accomodate these goals, we decided to write the program using several tech-stacks (Libraries & Frameworks), namely:
+Therefore, to accommodate these goals, we decided to write the program using several tech stacks (Libraries & Frameworks), namely:
 1. React (Javascript)
 2. Socket.io (Client & Server)
 3. TailwindCSS (Styling)
@@ -26,17 +24,14 @@ host server, since we do not deploy or publish it online to be accessible for cr
 
 # Getting Started
 
-These instructions will guide you to retrieve the copy of the project and try to run it in your perosnal local host computer for testing purposes
-
+These instructions will guide you to retrieve the copy of the project and try to run it on your personal local host computer for testing purposes
 ## Initial Setup
 
-In order to retrieve the copy of the program, try to type:
-
+In order to retrieve the copy of the program, try to type on your terminal:
 ```bash
 $ git clone https://github.com/ramzyizza/Collaborative-Text-Editor
 ```
-Next, cd into the project and open it with your prefered IDE. It is highly recommended for you to
-use Visual Studio Code.
+Next, cd into the project and open it with your preferred IDE. It is highly recommended that you use Visual Studio Code.
 
 ```bash
 $ cd Collaborative-Text-Editor
@@ -47,14 +42,14 @@ Alternatively, you may download the zipped file above, or try to clone it manual
 ## Packages Requirements (Ignore if not needed)
 
 In order to run the server and clients, it is mandatory for you to install these modules and dependencies 
-(in case it is unavailable in your machine) to fully support the program. If all of these packages are already downloaded, you may jump into the next section:
+(in case it is unavailable on your machine) to fully support the program. If all of these packages are already downloaded, you may jump into the next section:
 1. Nodemon (For Running the server)
 2. React Script (For running the clients)
 3. Socket.io (Connecting Servers and clients)
 4. TailwindCSS (For Styling, PostCSS, AutoPrefixer)
 5. Quill (For Text Tool)
 
-For more detailed installation, please refer to the latest documentation provided by those libraries and frameworks open
+For more detailed installation, please refer to the latest documentation provided by those libraries and frameworks on
 their official website.
 
 ### On the clients folder
@@ -98,7 +93,7 @@ $ npm i --save-dev nodemon
 ```
 
 # Running the program
-After all packages and dependencies has already installed, you may try to run the program by
+After all packages and dependencies have already been installed, you may try to run the program by
 running the server side first.
 
 ### On the server folder
@@ -114,16 +109,16 @@ Head over to the server folder first:
 $ cd client
 $ npm run startClient
 ```
-After running both server and client, you need to open localhost:3000 in your prefered browser.
+After running both the server and client, you need to open localhost:3000 in your preferred browser.
 To test that this program works in multiple clients, open multiple tabs of your browsers and copy paste
-this link to all those tabs:
+this link to all those tabs and try to type any text in it:
 ```bash
 http://localhost:3000/
 ```
 
 Congratulations! You just completed the full step-by-step guide to run this program in your local machine!
 
-If you persist some errors on the setup and package installations due to conflicting modules, we encorage you to 
+If you still persist in some errors on the setup and package installations due to conflicting modules, we encourage you to 
 lookup for the solution in Stackoverflow :D.
 
 This documentation was written by
