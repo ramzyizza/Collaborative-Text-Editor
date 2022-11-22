@@ -121,6 +121,34 @@ Congratulations! You just completed the full step-by-step guide to run this prog
 If you still persist in some errors on the setup and package installations due to conflicting modules, we encourage you to 
 lookup for the solution in Stackoverflow :D.
 
+
+## Our References
+
+ - [Web Dev Simplified - Build a Google Docs Clone with React, Socket.io, MongoDB](https://www.youtube.com/watch?v=iRaelG7v0OU&t=2114s)
+ - [Code For Interview - Google Docs Clone | React, Socket.io, MongoDB](https://github.com/matiassingers/awesome-readme)
+
+## Our Changes and Improvisation
+
+We highly appreciate to our references above for supporting an excellent step-by-step guide on building our program. However we want
+to emphasize that we only implement some segments of the code provided in the tutorial. Hence, there are couple additional changes and improvisation
+that was done in this project in order to prevent duplicating references's project, namely:
+
+1. We added and implemented additional framework (Tailwind)
+2. We added additional useful tools and buttons in the toolbar to manipulate the text.
+3. We changed the overall concept in which our program focus on collaborating to create short to medium text, whereas on the tutorial focus to build exact clone of Google Docs. 
+4. We changed the whole interface of the web including favicon, color palette, text field, and buttons using HTML. 
+5. We do not use any backend feature to store to the database such as MongoDB and Firebase.
+6. We eliminate unused files and redundant codes.
+7. We added features in which user can insert photos and videos to the text editor.
+
+
+## Screenshots
+### Program Screenshots (Image Insertion and Text Manipulation)
+![collaboratext-screenshot.png](https://i.postimg.cc/fLRLZgBK/collaboratext-screenshot.png)
+### Program Screenshots (Multiple Clients connected through local host server)
+![collaboratext-screenshot2.png](https://i.postimg.cc/jjmx0dns/collaboratext-screenshot2.png)
+
+
 This documentation was written by
 Ramzy Izza W. on November 20th 2022
-Any changes will be regularly updated through this readme
+Any changes will be regularly updated through this readme.md
