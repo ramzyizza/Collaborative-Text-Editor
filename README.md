@@ -29,7 +29,7 @@ These instructions will guide you to retrieve the copy of the project and try to
 
 In order to retrieve the copy of the program, try to type on your terminal:
 ```bash
-$ git clone https://github.com/ramzyizza/Collaborative-Text-Editor
+$ git clone https://github.com/ramzyizza/Collaborative-Text-Editor.git
 ```
 Next, cd into the project and open it with your preferred IDE. It is highly recommended that you use Visual Studio Code.
 
