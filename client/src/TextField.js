@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState} from 'react'
-import React from 'react'
-import Quill from "quill"
-import "quill/dist/quill.snow.css"
-import {io} from 'socket.io-client'
-import "./styles.css";
+import React from 'react' 
+import Quill from "quill" //Text Toolbar
+import "quill/dist/quill.snow.css" //Toolbar Theme
+import {io} from 'socket.io-client' //Socket 
+import "./styles.css"; //Web Styling
 
-//Quill Toolbar Configurations
+//Quill Toolbar Configurations using an array containing different sections
 const TOOLBAR =  [
     [{ 'size': [] }], // Size of Text
     [{ 'font': [] }], // Font Type
@@ -28,6 +28,7 @@ export default function TextEditor(){
       setState({ value });
     };
 
+    //Function to connect through socket
     useEffect(() => {
         const s = io("http://localhost:3001")  // connects to the server url that had been declared on server.js
         setSocket(s)                           //initiate the socket to variable S
@@ -43,12 +44,12 @@ export default function TextEditor(){
         if( socket == null || quill == null) return
 
         const handler = (delta) => {
-            quill.updateContents(delta)
+            quill.updateContents(delta) //Update the content for every delta changes received by the server
         }
-        socket.on("receive-changes", handler)
+        socket.on("receive-changes", handler) //The handler will receive the changes
         
         return() => {
-            socket.off("receive-changes", handler)
+            socket.off("receive-changes", handler) 
         }
     }, [socket, quill])
 
@@ -62,6 +63,8 @@ export default function TextEditor(){
         const handler = (delta, oldDelta, source) => {
             //If source changes not by user, return nothing
             if (source !== 'user') return
+            // Because if it's not by the user, the source would be different
+
             //send the changes (delta) to the server
             socket.emit("send-changes", delta) //delta denoted the subset of changes
         }
@@ -72,15 +75,18 @@ export default function TextEditor(){
         }
     }, [socket, quill])
 
+    /*To wrap all the toolbars into one container, 
+    so we wouldn't have multiple of them at the same time*/
     const wrapperRef = useCallback(wrapper => {
-        if (wrapper == null) return
-        wrapper.innerHTML = ""
-        const editor = document.createElement('div')
-        wrapper.append(editor) //editor is put inside wrapperRef
+        if (wrapper == null) return                     //To make sure that we have a wrapper
+        wrapper.innerHTML = ""                          //so that everytime it is ran, it is set to an empty code
+        const editor = document.createElement('div')    //to create new elements
+        wrapper.append(editor)                          //editor is put inside wrapperRef
+        //Declare and initiate quill as DOM
         const q = new Quill(editor, {
             theme: "snow",
             modules: { toolbar: TOOLBAR },
-        }) //quill is stated in editor 
+        })
         setQuill(q)
     }, [])
 
@@ -106,8 +112,4 @@ export default function TextEditor(){
 
         <div className="container mx-auto" ref={wrapperRef}></div> </> 
     ) 
-
-        
-
-
 } 
