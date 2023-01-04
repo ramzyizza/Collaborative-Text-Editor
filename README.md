@@ -1,10 +1,6 @@
 # Project Description
 This project is intended to fulfill the 2022 Computer Network and Systems Lab group's final project.
 
-- Ramzy Izza Wardhana - 21/472698/PA/20322
-- Audrey Shafira Fattima - 21/472678/PA/20320
-- Moehammad Azzriel Ilham - 21/477994/PA/20724
-
 In this final project, we are implementing the concept of socket programming in a real-world application to connect 
 multiple clients to a server. The main program functionality is to allow the user to collaboratively add, edit, manipulate,
 and delete text in real time through the local host server. This group project was inspired by one of the well-known online
